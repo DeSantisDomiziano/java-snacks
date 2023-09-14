@@ -35,6 +35,13 @@ public class javasnacks {
 
 //		Snack3
 //		Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in posizione dispari
+		int[] sumOdd = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		
+		int sumArray = 0;
+		for(int i = 1; i < sumOdd.length; i += 2) {
+			sumArray += sumOdd[i];
+		}
+		System.out.println(sumArray);
 
 //		Snack4
 //		Data in input una stringa verificare se è palindroma
