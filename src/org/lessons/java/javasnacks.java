@@ -1,5 +1,6 @@
 package org.lessons.java;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class javasnacks {
@@ -12,13 +13,25 @@ public class javasnacks {
 		int nEvenOrOdd = sc.nextInt();
 		
 		if(nEvenOrOdd % 2 == 0) {
-			System.out.print(nEvenOrOdd);
+			System.out.println(nEvenOrOdd);
 		} else{
 			System.out.println(nEvenOrOdd + 1);
 		}
 		
 //		Snack2
 //		Generatore di “nomi cognomi” casuali: il Grande Gatsby ha  una lista di nomi e una lista di cognomi, e da queste vuole mostrare a video una falsa lista di invitati con nome e cognome.
+		Random rnd = new Random();
+		
+		String[] names = {"Luca", "Marco", "Francesca", "Giada", "Mario", "Monica", "Marta", "Andrea"};
+		String[] surnames = {"Rossi", "Bianchi", "Marroni", "Cosentini", "De Marco", "Verratti", "Di Lorenzo", "Raspadori"};
+		
+		for(int i = 0; i < names.length; i++) {
+			String randomNames = names[rnd.nextInt(0, names.length)];
+			String randomSurnames = surnames[rnd.nextInt(0, surnames.length)];
+			
+			System.out.println(randomNames + " " + randomSurnames);
+			
+		}
 
 //		Snack3
 //		Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in posizione dispari
@@ -41,5 +54,7 @@ public class javasnacks {
 
 //		Snack 7
 //		Scrivere un programma che dati dei secondi li converta in ore, minuti, secondi e mostri a video la stringa generata (secondi → “hh:mm:ss”)
+		
+		sc.close();
 	}
 }
