@@ -9,19 +9,18 @@ public class javasnacks {
 //		Inserisci un numero, se è pari stampa il numero, se è dispari stampa il numero successivo.
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("inserisci un numero: ");
-		int nEvenOrOdd = sc.nextInt();
-		
-		if(nEvenOrOdd % 2 == 0) {
-			System.out.println(nEvenOrOdd);
-		} else{
-			System.out.println(nEvenOrOdd + 1);
-		}
+//		System.out.print("inserisci un numero: ");
+//		int nEvenOrOdd = sc.nextInt();
+//		
+//		if(nEvenOrOdd % 2 == 0) {
+//			System.out.println(nEvenOrOdd);
+//		} else{
+//			System.out.println(nEvenOrOdd + 1);
+//		}
 		
 //		Snack2
 //		Generatore di “nomi cognomi” casuali: il Grande Gatsby ha  una lista di nomi e una lista di cognomi, e da queste vuole mostrare a video una falsa lista di invitati con nome e cognome.
 		Random rnd = new Random();
-		
 		String[] names = {"Luca", "Marco", "Francesca", "Giada", "Mario", "Monica", "Marta", "Andrea"};
 		String[] surnames = {"Rossi", "Bianchi", "Marroni", "Cosentini", "De Marco", "Verratti", "Di Lorenzo", "Raspadori"};
 		
@@ -30,7 +29,6 @@ public class javasnacks {
 			String randomSurnames = surnames[rnd.nextInt(0, surnames.length)];
 			
 			System.out.println(randomNames + " " + randomSurnames);
-			
 		}
 
 //		Snack3
@@ -45,7 +43,22 @@ public class javasnacks {
 
 //		Snack4
 //		Data in input una stringa verificare se è palindroma
+		System.out.println("scrivi una parola: ");
+		
+		String palindroma = sc.nextLine();
+		char[] isPalindroma = palindroma.toCharArray();
+		String checkWord = "";
+		
+		for (int i = isPalindroma.length; i > 0; i--) {
 
+			checkWord += isPalindroma[i - 1];
+		}
+
+		if (palindroma.equals(checkWord)) {
+			System.out.println("è palindroma");
+		} else {
+			System.out.println("NON è palindroma");
+		}		
 //		Snack5
 //		Data una stringa in input mostrare a video quanti caratteri alfabetici contiene, quanti numeri e quanti simboli non alfanumerici.
 //		Continuare a chiedere una nuova stringa finchè non si inserisce 0.
