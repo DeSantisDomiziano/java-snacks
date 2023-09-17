@@ -4,77 +4,301 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class javasnacks {
+
+	String color = "red";
+	
 	public static void main(String[] args) {
-//		Snack1
-//		Inserisci un numero, se è pari stampa il numero, se è dispari stampa il numero successivo.
-		Scanner sc = new Scanner(System.in);
 		
-//		System.out.print("inserisci un numero: ");
-//		int nEvenOrOdd = sc.nextInt();
+		// Snack 1
+//		Scanner sc = new Scanner(System.in);
 //		
-//		if(nEvenOrOdd % 2 == 0) {
-//			System.out.println(nEvenOrOdd);
-//		} else{
-//			System.out.println(nEvenOrOdd + 1);
+//		System.out.print("value: ");
+//		int value = sc.nextInt();
+//		
+//		sc.close();
+//		
+////		if (value % 2 == 0) {
+////			
+////			System.out.println("value: " + value);
+////		} else {
+////			
+////			System.out.println("value: " + (value + 1));
+////		}
+//		
+//		System.out.println("value: " + (value + (
+//				value % 2 == 0
+//				? 0
+//				: 1
+//			))
+//		);
+		
+		// Snack 2
+//		Random rnd = new Random();
+//		
+//		String[] names = { "name1", "name2", "name3" };
+//		String[] lastnames = { "lastname1", "lastname2", "lastname3", "lastname4"};
+//		
+//		for (int x=0;x<5;x++) {
+//			
+//			int rndNameIndex = rnd.nextInt(names.length);
+//			int rndLastnameIndex = rnd.nextInt(lastnames.length);
+//			
+//			String name = names[rndNameIndex];
+//			String lastname = lastnames[rndLastnameIndex];
+//			
+//			System.out.println("fullname: " + name + " " + lastname);
 //		}
 		
-//		Snack2
-//		Generatore di “nomi cognomi” casuali: il Grande Gatsby ha  una lista di nomi e una lista di cognomi, e da queste vuole mostrare a video una falsa lista di invitati con nome e cognome.
-		Random rnd = new Random();
-		String[] names = {"Luca", "Marco", "Francesca", "Giada", "Mario", "Monica", "Marta", "Andrea"};
-		String[] surnames = {"Rossi", "Bianchi", "Marroni", "Cosentini", "De Marco", "Verratti", "Di Lorenzo", "Raspadori"};
+		 //Snack 3
+//		Random rnd = new Random();
+//		
+//		final int lng = 10;
+//		int[] arr = new int[lng];
+//		
+//		for (int x=0;x<lng;x++) {
+//			
+//			arr[x] = rnd.nextInt(10);
+//		}
+//		
+//		int sum = 0;
+//		for (int x=1;x<lng;x+=2) {
+//			
+//			System.out.println("[" + x + "] " + arr[x]);
+//			sum += arr[x];
+//		}
+//		
+//		System.out.println("sum: " + sum);
 		
-		for(int i = 0; i < names.length; i++) {
-			String randomNames = names[rnd.nextInt(0, names.length)];
-			String randomSurnames = surnames[rnd.nextInt(0, surnames.length)];
-			
-			System.out.println(randomNames + " " + randomSurnames);
-		}
-
-//		Snack3
-//		Crea un array di numeri interi e fai la somma di tutti gli elementi  che sono in posizione dispari
-		int[] sumOdd = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		// Snack 4
+//		Scanner sc = new Scanner(System.in);
+//		
+//		System.out.print("Stringa: ");
+//		String str = sc.nextLine().toLowerCase(); // anna : lng = 4
+//		
+//		System.out.println("\n---------------------\n");
+//		
+//		// OPZIONE 2
+//		boolean palindrom = true;
+//		for (int x=0;x<str.length()/2;x++) {
+//			
+//			int revX = str.length() - 1 - x;
+//			
+//			System.out.println("x: " + x);
+//			System.out.println("revX: " + revX);
+//			
+//			char charX = str.charAt(x);
+//			char charRevX = str.charAt(revX);
+//			
+//			System.out.println("charX: " + charX );
+//			System.out.println("charRevX: " + charRevX);
+//			
+//			if (charX != charRevX) {
+//				
+//				palindrom = false;
+//				break;
+//			}
+//			
+//			System.out.println("\n---------------------\n");
+//		}
+//		
+//		System.out.println("Palindoma: " + palindrom);
+//		
+////		OPZIONE 1
+////		String revStr = "";
+////		for (int x=str.length()-1;x>=0;x--) {
+////			
+////			revStr += str.charAt(x);
+////		}
+////		
+////		if (str.equals(revStr)) {
+////			
+////			System.out.println("La stringa e' palindroma");
+////		} else {
+////			
+////			System.out.println("La stringa NON e' palindroma");
+////		}
 		
-		int sumArray = 0;
-		for(int i = 1; i < sumOdd.length; i += 2) {
-			sumArray += sumOdd[i];
-		}
-		System.out.println(sumArray);
-
-//		Snack4
-//		Data in input una stringa verificare se è palindroma
-		System.out.println("scrivi una parola: ");
+		// Snack 5
+//		while(true) {
+//			Scanner sc = new Scanner(System.in);
+//			
+//			System.out.print("Stringa: ");
+//			String str = sc.nextLine();
+//			
+//			if (str.equals("0"))
+//				break;
+//			
+//			char[] alphaList = new char[(int) 'z' - (int) 'a' + 1];
+//			for (int x=0;x<alphaList.length;x++) {
+//				
+//				char c = (char) ((int) 'a' + x);
+//				alphaList[x] = c;
+//			}
+//			
+//			char[] numbList = new char[(int) '9' - (int) '0' + 1];
+//			for (int x=0;x<numbList.length;x++) {
+//				
+//				char c = (char) ((int) '0' + x);
+//				numbList[x] = c;
+//			}
+//			
+//			int alphaCount = 0;
+//			int numberCount = 0;
+//			int symbolCount = 0;
+//			
+//			for (int x=0;x<str.length();x++) {
+//				
+//				char c = str.charAt(x);
+//				
+//				if (Character.isDigit(c)) {
+//					
+//					numberCount++;
+//				} else if (Character.isLetter(c)) {
+//					
+//					alphaCount++;
+//				} else {
+//					
+//					symbolCount++;
+//				}
+//			}
+//			
+//			System.out.println("Alpha count: " + alphaCount);
+//			System.out.println("Number count: " + numberCount);
+//			System.out.println("Symbol count: " + symbolCount);
+//		}
+//		
+//		System.out.println("The end");
 		
-		String palindroma = sc.nextLine();
-		char[] isPalindroma = palindroma.toCharArray();
-		String checkWord = "";
+		// Snack 6
+//		Scanner sc = new Scanner(System.in);
+//		
+//		System.out.print("Stringa: ");
+//		String str = sc.nextLine().toLowerCase(); // 234
+//		
+//		int res = 0;
+//		for (int x=0;x<str.length();x++) {
+//			
+//			char c = str.charAt(x); // 2 -- 3
+//			int valC = (int) c - (int) '0'; // 2 -- 3
+//			
+//			res = res * 10 + valC; // 0 * 10 + 2 = 2 -- 2 * 10 + 3 = 23
+//		}
+//		
+//		System.out.println("Integer value: " + res);
+		 
+		// Snack 7
+//		Scanner sc = new Scanner(System.in);
+//		
+//		while(true) {
+//			System.out.print("Secondi: ");
+//			int secondTot = sc.nextInt();
+//			
+//			int hour = secondTot / (60 * 60);
+//			int minutes = (secondTot % (60 * 60)) / 60;
+//			int seconds = secondTot % 60;
+//			
+//			System.out.println(
+//					String.format("%02d", hour) + ":" 
+//				    + String.format("%02d", minutes) + ":" 
+//					+ String.format("%02d", seconds) 
+//			);
+//		}
 		
-		for (int i = isPalindroma.length; i > 0; i--) {
-
-			checkWord += isPalindroma[i - 1];
-		}
-
-		if (palindroma.equals(checkWord)) {
-			System.out.println("è palindroma");
-		} else {
-			System.out.println("NON è palindroma");
-		}		
-//		Snack5
-//		Data una stringa in input mostrare a video quanti caratteri alfabetici contiene, quanti numeri e quanti simboli non alfanumerici.
-//		Continuare a chiedere una nuova stringa finchè non si inserisce 0.
-
-//		Bonus
-//		Snack 6
-//		Dato un numero sotto forma di stringa, convertirlo in intero senza utilizzare funzioni già pronte.
-//		Possibile usare solo :
-//		cicli
-//		chartAt
-//		if / switch
-//		Es. “25” come stringa deve essere convertito in intero 25.
-
-//		Snack 7
-//		Scrivere un programma che dati dei secondi li converta in ore, minuti, secondi e mostri a video la stringa generata (secondi → “hh:mm:ss”)
+		// Snack 8
+//		Random rnd = new Random();
+//		final int lng = 10;
+//		int[] values = new int[lng];
+//		
+//		for (int x=0;x<lng;x++) {
+//			
+//			int value = rnd.nextInt(100, 151);
+//			values[x] = value;
+//		}
+//		
+//		int min = Integer.MAX_VALUE;
+//		int max = Integer.MIN_VALUE;
+//		int avg = 0;
+//		for (int x=0;x<values.length;x++) {
+//			
+//			final int value = values[x];
+//			
+//			if (value < min)
+//				min = value;
+//			
+//			if (value > max) 
+//				max = value;
+//			
+//			avg += value;
+//		}
+//		
+//		avg /= values.length;
+//		
+//		System.out.println("min: " + min);
+//		System.out.println("max: " + max);
+//		System.out.println("avg: " + avg);
 		
-		sc.close();
+		// Snack 9
+//		Scanner sc = new Scanner(System.in);
+//		
+//		int sum = 0;
+//		while (sum < 1_000) {
+//			
+//			System.out.print("Next value: ");
+//			int value = sc.nextInt();
+//			
+//			sum += value;
+//		}
+//		sc.close();
+//		
+//		System.out.println("sum: " + sum);
+		
+		// Snack 10
+//		Random rnd = new Random();
+//		
+//		final int lng = 10;
+//		int[] values = new int[lng];
+//		
+//		for (int x=0;x<10;x++) {
+//			
+//			final int value = rnd.nextInt(100, 1001);
+//			values[x] = value;
+//		}
+//		
+//		for (int x=0;x<lng;x++) {
+//			
+//			final int value = values[x];
+//			
+//			if (value % 2 == 0) { // e' pari
+//				
+//				System.out.println("valore pari: " + value);
+//			}
+//		}
+//		System.out.println("\n-----------------------\n");
+//		for (int x=0;x<lng;x++) {
+//			
+//			final int value = values[x];
+//			
+//			if (value % 2 > 0) { // e' pari
+//				
+//				System.out.println("valore dispari: " + value);
+//			}
+//		}
+//		System.out.println("\n-----------------------\n");
+//		for (int x=0;x<lng;x+=2) {
+//			
+//			final int value = values[x];
+//			
+//			System.out.println("valore indice pari: [" + x + "]: " + value);
+//		}
+//		System.out.println("\n-----------------------\n");
+//		for (int x=1;x<lng;x+=2) {
+//			
+//			final int value = values[x];
+//			
+//			System.out.println("valore indice dispari: [" + x + "]: " + value);
+//		}
+		
+		String str1 = "hello";
+		String str2 = "world";
 	}
 }
